@@ -6,4 +6,5 @@ seaborn
 scikit-learn
 streamlit
 plotly
+imghdr
 altair==4.2.2
