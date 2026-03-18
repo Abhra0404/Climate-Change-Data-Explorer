@@ -1,155 +1,175 @@
 # 🌍 Climate Change Data Explorer
 
-## 🚀 Problem Statement
+An interactive data science project that analyzes global climate trends, uncovers relationships between key environmental factors, and predicts future climate conditions.
 
-Climate change is one of the most pressing global challenges today. Rising temperatures, increasing CO₂ emissions, and shifting climate patterns demand deeper understanding through data.
+---
+
+## 🚀 Live Demo
+
+👉 https://climate-change-data-explorer.streamlit.app/
+
+---
+
+## 📌 Problem Statement
+
+Climate change is one of the most critical challenges of our time. Understanding how factors like CO₂ emissions, global temperature, and sea level are interconnected is essential for making informed decisions.
 
 This project aims to:
 
 * Analyze historical climate data
-* Identify trends and correlations
-* Generate meaningful insights
-* Predict future temperature changes
-
-The goal is to transform raw data into **actionable insights and visual storytelling**.
+* Identify key trends and correlations
+* Build predictive models for future climate changes
+* Present insights through an interactive dashboard
 
 ---
 
-## 📊 Dataset Information
+## 📊 Datasets Used
 
-This project uses publicly available datasets:
+The project integrates multiple real-world datasets:
 
-### 1. Global Temperature Data
+* 🌡 **Global Land Temperature**
+* 🏭 **CO₂ Emissions Data**
+* 🌊 **Global Sea Level Rise**
 
-* Contains historical temperature records over time
-* Key fields: `Year`, `AverageTemperature`, `Country`
+### 🧹 Data Processing
 
-### 2. CO₂ Emissions Data
-
-* Country-wise CO₂ emissions over time
-* Key fields: `Year`, `Country`, `CO2 Emissions`
-
-### 🧹 Data Processing Steps:
-
-* Removed missing/null values
-* Converted date columns into year format
+* Cleaned missing values
+* Standardized time format (Year)
 * Aggregated yearly averages
-* Merged datasets based on `Year` and `Country`
+* Merged multiple datasets into a unified structure
 
 ---
 
-## 🔍 Key Insights
+## 🧠 Key Features
 
-* 📈 Global temperatures show a **clear upward trend** over the past century
-* 🌍 Strong positive correlation between **CO₂ emissions and temperature rise**
-* 🔥 Post-2000 period shows **accelerated warming compared to previous decades**
-* 🌡️ Certain regions experience **higher temperature volatility**
-* ⚠️ Recent years consistently exceed historical averages → indicating **climate anomalies**
+### 📈 Interactive Dashboard
 
----
+* Built using **Streamlit + Plotly**
+* Dynamic metric selection
+* Year range filtering
+* Smooth interactive visualizations
 
-## 📸 Screenshots of Visualizations
+### 📊 Data Visualizations
 
-### 📈 Global Temperature Trend
+* Time-series trend analysis
+* Multi-variable comparison charts
+* Correlation heatmaps
+* Scatter plots with regression
 
-* Line plot showing temperature rise over years
+### 🌍 Geospatial Visualization
 
-### 🌍 CO₂ vs Temperature Correlation
+* Interactive world map using Plotly
+* Animated data exploration
 
-* Scatter plot with regression line
+### 🔮 Predictive Modeling
 
-### 🔥 Correlation Heatmap
+* Linear regression using NumPy
+* Future temperature forecasting
+* Trend projection visualization
 
-* Relationship between climate variables
+### 🧠 Insight Engine
 
-### 🌎 Country-wise Comparison
+* Automatically highlights:
 
-* Multi-line plot comparing temperature trends across countries
-
-*(Add screenshots here once generated)*
-
----
-
-## 🔮 Future Predictions
-
-Using linear regression (NumPy-based), the project predicts future temperature trends.
-
-### 📌 Key Observations:
-
-* Temperature is expected to **continue rising steadily**
-* If current trends persist, future decades may see **significant warming increases**
-* CO₂ emissions remain a **critical driving factor**
-
-This highlights the urgency of **sustainable environmental policies**.
-
----
-
-## ⚙️ How to Run the Project
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/climate-explorer.git
-cd climate-explorer
-```
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run Jupyter Notebooks
-
-```bash
-cd notebooks
-jupyter notebook
-```
-
-Run notebooks in order:
-
-1. Data Cleaning
-2. Analysis
-3. Visualization
-4. Prediction
-
----
-
-### (Optional) Run Streamlit App
-
-```bash
-cd app
-streamlit run app.py
-```
+  * CO₂ → Temperature correlation
+  * Temperature → Sea level impact
+  * Recent climate anomalies
 
 ---
 
 ## 🛠 Tech Stack
 
-* **NumPy** → numerical computations & predictions
-* **Pandas** → data cleaning & manipulation
-* **Matplotlib** → trend visualization
-* **Seaborn** → statistical plots & heatmaps
+* **Python**
+* **NumPy** → numerical computation
+* **Pandas** → data processing
+* **Matplotlib & Seaborn** → static visualization
+* **Plotly** → interactive charts
+* **Streamlit** → dashboard UI
 
 ---
 
-## 🌟 Future Improvements
+## 📁 Project Structure
 
-* Add real-time climate data integration
-* Build interactive dashboards
-* Implement advanced ML models for prediction
-* Deploy as a full-stack web application
+```
+climate-explorer/
+│
+├── app/
+│   └── app.py              # Streamlit dashboard
+│
+├── data/
+│   ├── raw/               # Original datasets
+│   └── cleaned/           # Processed datasets
+│
+├── src/
+│   ├── preprocess.py      # Data cleaning logic
+│   ├── analysis.py        # Data merging
+│   ├── visualize.py       # Visualization functions
+│   └── predict.py         # Prediction logic
+│
+├── notebooks/             # EDA & experimentation
+├── requirements.txt
+├── runtime.txt
+└── README.md
+```
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1️⃣ Clone the repository
+
+```
+git clone https://github.com/your-username/climate-explorer.git
+cd climate-explorer
+```
+
+### 2️⃣ Install dependencies
+
+```
+pip3 install -r requirements.txt
+```
+
+### 3️⃣ Run the dashboard
+
+```
+streamlit run app/app.py
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Integrate real-time climate APIs
+* Add advanced machine learning models
+* Improve geospatial accuracy with country-level datasets
+* Deploy full-stack version with backend APIs
+
+---
+
+## 🌟 Key Insights
+
+* Global temperatures show a **consistent upward trend**
+* Strong positive correlation between **CO₂ emissions and temperature**
+* Rising temperatures contribute to **sea level increase**
+* Recent years exhibit **accelerated warming patterns**
 
 ---
 
 ## 🤝 Contributing
 
-Feel free to fork this repo and enhance it with new features or datasets!
+Contributions are welcome! Feel free to fork the repo and improve the project.
 
 ---
 
-## ⭐ If you like this project
+## ⭐ Show your support
 
-Give it a star ⭐ — it motivates further development!
+If you found this project useful, consider giving it a star ⭐
+
+---
+
+## 👤 Author
+
+**Abhra**
+Aspiring Software Engineer & Data Enthusiast
 
 ---

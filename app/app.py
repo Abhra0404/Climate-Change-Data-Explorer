@@ -8,7 +8,7 @@ import seaborn as sns
 st.set_page_config(page_title="Climate Explorer", layout="wide")
 
 # -------------------- LOAD DATA --------------------
-df = pd.read_csv("data/cleaned/final_climate_data.csv")
+df = pd.read_csv("../data/cleaned/final_climate_data.csv")
 
 # -------------------- CUSTOM CSS --------------------
 st.markdown("""
