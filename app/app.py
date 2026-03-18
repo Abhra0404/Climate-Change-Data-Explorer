@@ -141,7 +141,7 @@ ax.set_title("Temperature Forecast")
 
 left_pad, pred_col, right_pad = st.columns([1, 2, 1])
 with pred_col:
-    st.pyplot(fig, use_container_width=False)
+    st.pyplot(fig)
 
 # -------------------- INSIGHTS --------------------
 st.subheader("🧠 Key Insights")
